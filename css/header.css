@@ -11,8 +11,17 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    position: relative;
 }
-
+#search-input-container{
+    position: absolute;
+    top:13px;
+    right:100px;
+    background: #514f4f;
+    border: none;
+    border-bottom:1 px solid #888888;
+    color: #ffffff;
+}
 .header-container > nav {
     display: flex;
     color: #ffffff;
@@ -31,4 +40,7 @@ header {
     width: 93px;
     display: flex;
     justify-content: space-between;
+}
+.active-tag {
+
 }

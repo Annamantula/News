@@ -64,3 +64,10 @@ main {
     justify-content: flex-end;
     display: flex;
 }
+#add-news-form #file{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+}

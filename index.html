@@ -14,26 +14,27 @@
 <header>
     <div class="header-container">
         <a href="./index.html"><img src="./public/logo.svg" alt="LIVE"></a>
-        <nav>
-            <div>Новости</div>
-            <div>Финансы</div>
-            <div>Недвижимость</div>
-            <div>Спорт</div>
-            <div>Афиша</div>
-            <div>Магазины</div>
-            <div>Работа</div>
-            <div>ТВ программа</div>
-            <div>Почта</div>
-            <div>Погода</div>
+        <nav id="nav">
+            <div id="news">Новости</div>
+            <div id="finace">Финансы</div>
+            <div id="real estate">Недвижимость</div>
+            <div id="sport">Спорт</div>
+            <div id="movies">Афиша</div>
+            <div id="shops">Магазины</div>
+            <div id="job">Работа</div>
+            <div id="TV">ТВ программа</div>
+            <div id="mail">Почта</div>
+            <div id="wheather">Погода</div>
         </nav>
         <div>
-            <img src="./public/search.svg" alt="поиск">
+            <input type ="search" id= "search-input-container" style = "display: none">
+            <img src="./public/search.svg" alt="поиск" id ="search">
             <img src="./public/user_logo.svg" alt="user">
-            <img src="./public/add.svg" alt="добавить новость">
+            <img src="./public/add.svg" alt="добавить новость" id ="add-page-link">
         </div>
     </div>
 </header>
-<main>
+<main id = "main-page">
     <div id = "main-news-container" class="main-news-container">
         <div class="big-news-container" >
             <a href="./news.html">
@@ -94,9 +95,8 @@
     </div>
     <div class="hot-container">
         <h2>Горячее</h2>
-         <div id ="trends-container"></div>
-
-        <div class="small-news-container" style= "display: none">
+         <div id ="trends-container">
+           <div class="small-news-container" style= "display: none">
             <a href="./news.html" class="image-link">
                 <img src="./public/news1.jpg" alt="">
             </a>
@@ -115,6 +115,7 @@
                     11,5 тыс
                 </div>
             </div>
+         </div>
         </div>
         <!--контейнер новостей-->
         <div class="small-news-container">
@@ -166,7 +167,19 @@
         </div>
         <!-- маленькие новости ещё-->
         <div class="news-description">
-            <span>16:20</span>
+            <span>16:11</span>
+            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
+        </div>
+        <div class="news-description">
+            <span>16:09</span>
+            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
+        </div>
+        <div class="news-description">
+            <span>16:01</span>
+            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
+        </div>
+        <div class="news-description">
+            <span>16:15</span>
             В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
         </div>
         <div class="news-description">
@@ -174,25 +187,47 @@
             В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
         </div>
         <div class="news-description">
-            <span>16:20</span>
-            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
-        </div>
-        <div class="news-description">
-            <span>16:20</span>
-            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
-        </div>
-        <div class="news-description">
-            <span>16:20</span>
-            В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
-        </div>
-        <div class="news-description">
-            <span>16:20</span>
+            <span>16:21</span>
             В Сети появился список, где в Минске устанавливают видеокамеры для наблюдения за улицей
         </div>
         <!--конец-->
     </div>
 </main>
-<script src="./src/index.js" type ="module"></script>   
+<main id = "add-page" style ="display: none"...>
+    <form action="#" method="post" id = "add-news-form" class="full-news-container">
+        <div class="info-container">
+            Категория:
+            <select name="tag">
+                <option value="finace">Финансы</option>
+                <option value="real estate">Недвижимость</option>
+                <option value="sport">Спорт</option>
+                <option value="movies">Афиша</option>
+                <option value="shops">Магазины</option>
+                <option value="job">Работа</option>
+                <option value="TV">ТВ программа</option>
+                <option value="mail">Почта</option>
+                <option value="wheather">Погода</option>
+            </select>
+        </div>
+        <input type="text" placeholder="Текст заголовка" class="news-name">
+        <div id="image-container"class="image-container">
+            <label for ="file">
+                <img src="./public/plus.svg" alt="">
+            </label>
+            <input type ="file" name = "file" id = "file" accept =".jpg, .jpeg, .svg .png .gif">
+        </div>
+        <div class="full-text" id = fullText contentEditable=true data-text="Основной текст новости"></div>
+        <div class="button-container">
+            <button id = "cancel-button">Отмена</button>
+            <button class="add-button" id = "save">Сохранить новость</button>
+        </div>
+    </form>
+    
+</main>
+<script src="./src/header.js" type ="module"></script> 
+<script src="./src/addNews.js" type ="module"></script> 
+<script src="./src/index.js" type ="module"></script> 
+
 </body>
 </html>
 

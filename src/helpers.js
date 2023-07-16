@@ -1,5 +1,6 @@
 //this function can be useful for other parts of our app
 import {TAG_COLORS,TAG_NAMES } from "./options.js";
+
 export function makeFriendlyNumber(num){
     if (num >= 1000000)
     return intlFormat(num/1000000)+ 'млн';
@@ -14,6 +15,7 @@ export function makeFriendlyNumber(num){
 };
 export function addImage(node,src){
     node.children[0].src=src;
+    // console.log(node.children, 'addImage childernnnn')
 }
 
 export function addTag(node,tag){
@@ -25,6 +27,5 @@ export function addStatistic(node, likesCount, commentsCount){
     const likes = makeFriendlyNumber(likesCount);
     node.children[0].innerHTML = `<img src ="./public/heart.svg" alt =""> ${likes}`;
     const comments = makeFriendlyNumber(commentsCount);
-    console.log(node.children)
     node.children[1].innerHTML = `<img src ="./public/comments.svg" alt =""> ${comments}`;
   } 

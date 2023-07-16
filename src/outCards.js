@@ -7,6 +7,7 @@ export default function (news, {id, configCardNode}) {
     cleanOldNews(newsContainer,bigNewsCart);
       for (let oneNews of news){
           const copy = bigNewsCart.cloneNode(true);
+          console.log(oneNews,'???')
           configCardNode(copy, oneNews);
           newsContainer.append(copy);
       }
