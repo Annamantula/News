@@ -1,4 +1,5 @@
 //this function can be useful for other parts of our app
+import outNews from "./news.js";
 import {TAG_COLORS,TAG_NAMES } from "./options.js";
 
 export function makeFriendlyNumber(num){
@@ -29,3 +30,10 @@ export function addStatistic(node, likesCount, commentsCount){
     const comments = makeFriendlyNumber(commentsCount);
     node.children[1].innerHTML = `<img src ="./public/comments.svg" alt =""> ${comments}`;
   } 
+
+export function addNewsLinkClick(node,id){
+  node.onClick = event =>{
+    event.preventDefault();
+    outNews(id);
+  };
+}

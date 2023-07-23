@@ -1,7 +1,7 @@
 import newsMainCardConfig from "./newsMainCardConfig.js";
 import outCards from "./outCards.js";
-import { switchToAdd } from "./router.js";
-console.log("HEEADDEERRR")
+import { switchToAdd,switchToMain } from "./router.js";
+import {news} from "./background.js";
 const nav= document.getElementById('nav');
 
 nav.onclick= event=>{
@@ -29,7 +29,7 @@ searchButton.onclick = () => {
 
  const addPageLink = document.getElementById("add-page-link")
  addPageLink.onclick = ()=> switchToAdd()
- 
+
  searchInput.addEventListener('keyup', event =>{
      if(event.key !== "Enter") return;
      const searchText = event.target.value;

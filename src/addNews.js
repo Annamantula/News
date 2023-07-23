@@ -5,7 +5,7 @@ import { switchToMain } from "./router.js";
 const imageContainer = document.getElementById("image-container");
 const file = document.getElementById("file");
 const form = document.getElementById("add-news-form")
-const fullText = document.getElementsById("fullText")
+const fullText = document.getElementById("fullText")
 file.addEventListener("change", ()=>{
     imageContainer.style.background = 
     `url(${URL.createObjectURL(file.files[0])}) no-repeat center/cover`
@@ -21,6 +21,7 @@ cancel.onclick = event => {
 const save = document.getElementById("save");
 save.onclick = event =>{
     event.preventDefault();
+    console.log(form.elements, "erorrrrr!!!!")
     const newArticle = {
         tag: form.elements.tag.value,
         date: new Date(),
