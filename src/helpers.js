@@ -32,7 +32,7 @@ export function addStatistic(node, likesCount, commentsCount){
   } 
 
 export function addNewsLinkClick(node,id){
-  node.onClick = event =>{
+  node.onclick = event =>{
     event.preventDefault();
     outNews(id);
   };
