@@ -34,3 +34,118 @@ export function makelike(newsId) {
   const oneFullNews = fullNews.find(n=> n.id === newsId);
   oneFullNews.isLiked = !oneFullNews.isLiked;
 }
+export const allComments = [
+
+  {
+  
+  id: 1,
+  
+  newsId: 1,
+  
+  text: 'текст комметария',
+  
+  user: {
+  
+  userId: 1,
+  
+  username: 'Иван Иванов',
+  
+  img: './public/user_logo3.jpg'
+  
+  },
+  
+  subComments: [
+  
+  {
+  
+  id: 1,
+  
+  commentId: 1,
+  
+  newsId: 1,
+  
+  userToAnswer: {
+  
+  userId: 2,
+  
+  username: 'Олег Викторов',
+  
+  img: './public/user_logo2.jpg'
+  
+  },
+  
+  text: 'текс подкомментария',
+  
+  user: {
+  
+  userId: 1,
+  
+  username: 'Иван Иванов',
+  
+  img: './public/user_logo3.jpg'
+  
+  },
+  
+  }
+  
+  ],
+  
+  },
+  
+  {
+  
+  id: 2,
+  
+  newsId: 1,
+  
+  text: 'текст комметария2',
+  
+  user: {
+  
+  userId: 1,
+  
+  username: 'Иван Иванов',
+  
+  img: './public/user_logo3.jpg'
+  
+  },
+  
+  subComments: [
+  
+  {
+  
+  id: 1,
+  
+  commentId: 1,
+  
+  newsId: 1,
+  
+  userToAnswer: {
+  
+  userId: 2,
+  
+  username: 'Олег Викторов',
+  
+  img: './public/user_logo2.jpg'
+  
+  },
+  
+  text: 'текс подкомментария',
+  
+  user: {
+  
+  userId: 1,
+  
+  username: 'Иван Иванов',
+  
+  img: './public/user_logo3.jpg'
+  
+  }
+  
+  }
+  
+  ],
+  
+  }
+  
+  ];

@@ -1,4 +1,5 @@
-import { loggedUser,updateComment,updateSubComment } from "./backend";
+import { loggedUser,updateComment,updateSubComment,addSubComment,allComments } from "./backend.js";
+import {switchDisplay} from "./helpers.js"
 
 function configComment ({user,id,text,commentId,answerTo},node,redactHandler,answerHandler){
     const copy = node.children[0].cloneNode(true);
